@@ -1,0 +1,50 @@
+html{
+	box-sizing: border-box;
+}
+*, *::before, *::after{
+	box-sizing: inherit;
+}
+button:active, 
+button:focus {
+    outline: none;
+}
+body {
+	background-color: #ccc;
+	font-family: sans-serif;
+}
+.box {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+}
+.box-btn {
+	position: relative;
+	padding: 10px 30px;
+	border-radius: 5px;
+	background: rgb(26,160,210);
+	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 10px 5px #999;
+	border: none;
+	color: #fff;
+	overflow: hidden;
+}
+
+.box-btn:active {
+	top: 3px;
+	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 3px 3px #999;
+}
+
+.box-btn::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 100%;
+	background-color: rgb(255,255,255, 0.3);
+	transform: translateX(-45px) skewX(45deg);
+	transition: all 0.4s;
+}
+.box-btn:hover::before {
+	transform: translateX(167px) skewX(45deg);
+}
