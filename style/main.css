@@ -48,3 +48,49 @@ body {
 .box-btn:hover::before {
 	transform: translateX(167px) skewX(45deg);
 }
+
+.book {
+	position: absolute;
+    top: 30%;
+	left: 0%;
+	width: 600px;
+}
+.book_list {
+	display: flex;
+	list-style: none;
+}
+.book-item {
+	display: flex;
+	align-items: center;
+	height: 450px;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}
+.book-item:first-child {
+	border-left: 2px solid black;
+}
+h2 {
+	transform: rotate(-90deg);
+	display: block;
+	font-size: 16px;
+	white-space: normal;
+}
+.book-item__text {
+	padding-right: 20px;
+	height: 400px;
+	display: none;
+	
+}
+h1 {
+	font-size: 18px;
+	width: 300px;
+}
+p {
+	flex; 0 1 200px;
+	font-size: 14px;
+}
+
+h2:hover + .book-item__text {
+	display: block;
+}
